@@ -1,0 +1,26 @@
+LAZY LOOPIN - AUTOMATIC CONTENT DISCOVERY
+
+Replace the following in your existing project:
+  app/page.tsx
+  components/Library.tsx
+Add:
+  lib/getLibraryVideos.ts
+
+Keep your existing data/videos.ts, app/globals.css, and public folder.
+The archive includes the full project for convenience. Do not overwrite your public/content folders!
+
+ADD A NEW VIDEO:
+  public/content/My New Video/My New Video.png
+  public/content/My New Video/result.mp4
+
+No code edits required. The new folder appears after refreshing the site.
+Optional category.txt inside the new folder: Watchlists, Movie Breakdowns, or Original Stories.
+New videos without category.txt default to Original Stories.
+Existing 15 videos keep their categories and TikTok IDs from data/videos.ts.
+New videos have no TikTok button until you add their TikTok ID in data/videos.ts.
+Hero carousel selects up to five videos, prioritizing the existing featured video and recent folders.
+
+NOTE: This scans files present on the Next.js server. On Vercel, adding a local
+folder requires a new Git commit/push and deployment. Large MP4/MOV files
+may exceed Git hosting or Vercel deployment limits. Consider video hosting
+for a growing library. MP4 H.264/AAC is the safest playback format.
